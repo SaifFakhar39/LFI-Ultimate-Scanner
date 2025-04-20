@@ -1,8 +1,6 @@
 # LFI-Ultimate-Scanner
 ![The tool's slogan](image/image.svg)
 
-# LFI Ultimate Scanner
-
 ### 🛠️ **وصف الأداة:**
 
 **LFI Ultimate Scanner** هي أداة تستخدم لاكتشاف **Local File Inclusion (LFI)** في التطبيقات.  
