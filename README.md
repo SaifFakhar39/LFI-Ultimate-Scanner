@@ -19,7 +19,7 @@
 
 1. قم بتشغيل البرنامج باستخدام Python:
 ```
-python lfi_ultimate_generator.py
+python run.py
 ```
 
 2. سينشئ البرنامج تلقائياً ملفاً باسم `lfi_ultimate_payloads_[timestamp].txt` يحتوي على جميع البايلودات المولدة.
