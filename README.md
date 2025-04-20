@@ -1,4 +1,4 @@
-# لأداة LFI Ultimate Payload Generator
+# اداة LFI Ultimate Payload Generator
 
 ![logo](./image/logo.svg)
 
