@@ -1,0 +1,363 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- تدرجات لونية محسنة -->
+  <defs>
+    <!-- تدرج خلفية داكنة -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#141414;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- تدرج بنفسجي للعنصر الرئيسي -->
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a0072;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7b00c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a200ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- تدرج أخضر للإشارات -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003300;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00cc00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ff00;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- تدرج أزرق لتأثيرات الإشعاع -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000066;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0033cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3366ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- تدرج أحمر للتحذير -->
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#660000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#cc0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff0000;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- تأثير توهج قوي -->
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- تأثير إنذار محسن -->
+    <filter id="enhancedAlarm">
+      <feFlood flood-color="#ff0000" flood-opacity="0.3" result="flood" />
+      <feComposite in="flood" in2="SourceGraphic" operator="in" result="mask" />
+      <feMorphology in="mask" operator="dilate" radius="3" result="dilated" />
+      <feGaussianBlur in="dilated" stdDeviation="3" result="blurred" />
+      <feComposite in="blurred" in2="SourceGraphic" operator="over" />
+    </filter>
+    
+    <!-- تأثير توهج بنفسجي -->
+    <filter id="purpleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feFlood flood-color="#a200ff" flood-opacity="0.7" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- تموجات خلفية -->
+    <pattern id="networkPattern" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M0,25 Q12.5,0 25,25 Q37.5,50 50,25" stroke="#ffffff" stroke-width="0.5" fill="none" opacity="0.1"/>
+      <path d="M0,25 Q12.5,50 25,25 Q37.5,0 50,25" stroke="#ffffff" stroke-width="0.5" fill="none" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- خلفية داكنة -->
+  <rect width="800" height="600" fill="url(#bgGradient)" />
+  
+  <!-- نمط الشبكة الخلفية -->
+  <rect width="800" height="600" fill="url(#networkPattern)" opacity="0.7" />
+  
+  <!-- تأثير الإنذار الأحمر المحسن -->
+  <g opacity="0.15">
+    <rect x="0" y="0" width="800" height="600" fill="#ff0000">
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="2s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- شبكة عملاقة بالخلفية باللون الأبيض -->
+  <g opacity="0.6">
+    <!-- خطوط الشبكة الأفقية -->
+    <g stroke="#ffffff" stroke-width="0.5">
+      <line x1="0" y1="50" x2="800" y2="50" />
+      <line x1="0" y1="100" x2="800" y2="100" />
+      <line x1="0" y1="150" x2="800" y2="150" />
+      <line x1="0" y1="200" x2="800" y2="200" />
+      <line x1="0" y1="250" x2="800" y2="250" />
+      <line x1="0" y1="300" x2="800" y2="300" />
+      <line x1="0" y1="350" x2="800" y2="350" />
+      <line x1="0" y1="400" x2="800" y2="400" />
+      <line x1="0" y1="450" x2="800" y2="450" />
+      <line x1="0" y1="500" x2="800" y2="500" />
+      <line x1="0" y1="550" x2="800" y2="550" />
+    </g>
+    
+    <!-- خطوط الشبكة العمودية -->
+    <g stroke="#ffffff" stroke-width="0.5">
+      <line x1="50" y1="0" x2="50" y2="600" />
+      <line x1="100" y1="0" x2="100" y2="600" />
+      <line x1="150" y1="0" x2="150" y2="600" />
+      <line x1="200" y1="0" x2="200" y2="600" />
+      <line x1="250" y1="0" x2="250" y2="600" />
+      <line x1="300" y1="0" x2="300" y2="600" />
+      <line x1="350" y1="0" x2="350" y2="600" />
+      <line x1="400" y1="0" x2="400" y2="600" />
+      <line x1="450" y1="0" x2="450" y2="600" />
+      <line x1="500" y1="0" x2="500" y2="600" />
+      <line x1="550" y1="0" x2="550" y2="600" />
+      <line x1="600" y1="0" x2="600" y2="600" />
+      <line x1="650" y1="0" x2="650" y2="600" />
+      <line x1="700" y1="0" x2="700" y2="600" />
+      <line x1="750" y1="0" x2="750" y2="600" />
+    </g>
+    
+    <!-- عقد الشبكة (أجهزة) -->
+    <g>
+      <!-- جهاز سيرفر -->
+      <g transform="translate(150, 200)">
+        <rect x="-15" y="-25" width="30" height="50" fill="#cccccc" stroke="#ffffff" stroke-width="1" />
+        <rect x="-12" y="-22" width="24" height="3" fill="#333333" />
+        <rect x="-12" y="-17" width="24" height="3" fill="#333333" />
+        <rect x="-12" y="-12" width="24" height="3" fill="#333333" />
+        <circle cx="0" cy="15" r="3" fill="#00ff00">
+          <animate attributeName="fill" values="#00ff00;#009900;#00ff00" dur="1s" repeatCount="indefinite" />
+        </circle>
+      </g>
+      
+      <!-- جهاز سيرفر آخر -->
+      <g transform="translate(650, 150)">
+        <rect x="-15" y="-25" width="30" height="50" fill="#cccccc" stroke="#ffffff" stroke-width="1" />
+        <rect x="-12" y="-22" width="24" height="3" fill="#333333" />
+        <rect x="-12" y="-17" width="24" height="3" fill="#333333" />
+        <rect x="-12" y="-12" width="24" height="3" fill="#333333" />
+        <circle cx="0" cy="15" r="3" fill="#ff0000">
+          <animate attributeName="fill" values="#ff0000;#990000;#ff0000" dur="1s" repeatCount="indefinite" />
+        </circle>
+      </g>
+      
+      <!-- جهاز كمبيوتر -->
+      <g transform="translate(250, 450)">
+        <rect x="-20" y="-15" width="40" height="30" fill="#cccccc" stroke="#ffffff" stroke-width="1" />
+        <rect x="-17" y="-12" width="34" height="20" fill="#333333" />
+        <rect x="-15" y="17" width="30" height="3" fill="#cccccc" />
+      </g>
+      
+      <!-- جهاز كمبيوتر محمول -->
+      <g transform="translate(550, 400)">
+        <rect x="-20" y="-12" width="40" height="24" fill="#cccccc" stroke="#ffffff" stroke-width="1" />
+        <rect x="-18" y="-10" width="36" height="20" fill="#333333" />
+        <path d="M-22,12 L22,12 L25,22 L-25,22 Z" fill="#aaaaaa" stroke="#ffffff" stroke-width="0.5" />
+      </g>
+      
+      <!-- راوتر شبكة -->
+      <g transform="translate(400, 100)">
+        <rect x="-15" y="-7" width="30" height="14" rx="3" ry="3" fill="#333333" stroke="#ffffff" stroke-width="1" />
+        <circle cx="-10" cy="0" r="2" fill="#00ff00">
+          <animate attributeName="fill" values="#00ff00;#009900;#00ff00" dur="0.7s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-5" cy="0" r="2" fill="#00ff00">
+          <animate attributeName="fill" values="#00ff00;#009900;#00ff00" dur="1.1s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="0" r="2" fill="#00ff00">
+          <animate attributeName="fill" values="#00ff00;#009900;#00ff00" dur="0.9s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="5" cy="0" r="2" fill="#00ff00">
+          <animate attributeName="fill" values="#00ff00;#009900;#00ff00" dur="1.3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="10" cy="0" r="2" fill="#00ff00">
+          <animate attributeName="fill" values="#00ff00;#009900;#00ff00" dur="0.8s" repeatCount="indefinite" />
+        </circle>
+      </g>
+    </g>
+    
+    <!-- تمثيل الاتصالات بين الأجهزة -->
+    <g stroke="#ffffff" stroke-width="0.5" stroke-dasharray="5,5">
+      <line x1="150" y1="200" x2="400" y2="100">
+        <animate attributeName="stroke-dashoffset" values="10;0" dur="10s" repeatCount="indefinite" />
+      </line>
+      <line x1="650" y1="150" x2="400" y2="100">
+        <animate attributeName="stroke-dashoffset" values="10;0" dur="10s" repeatCount="indefinite" />
+      </line>
+      <line x1="250" y1="450" x2="400" y2="100">
+        <animate attributeName="stroke-dashoffset" values="10;0" dur="10s" repeatCount="indefinite" />
+      </line>
+      <line x1="550" y1="400" x2="400" y2="100">
+        <animate attributeName="stroke-dashoffset" values="10;0" dur="10s" repeatCount="indefinite" />
+      </line>
+    </g>
+    
+    <!-- نقاط البيانات المتحركة لتمثيل تدفق البيانات -->
+    <g>
+      <circle cx="0" cy="0" r="3" fill="#a200ff">
+        <animate attributeName="cx" values="150;400" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="200;100" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="3" fill="#00ffff">
+        <animate attributeName="cx" values="650;400" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="150;100" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="3" fill="#ff0000">
+        <animate attributeName="cx" values="250;400" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="450;100" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="3" fill="#00ff00">
+        <animate attributeName="cx" values="550;400" dur="2.5s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="400;100" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+  
+  <!-- العنصر الرئيسي الذي يعبر عن القوة الغاشمة باللون البنفسجي -->
+  <g transform="translate(400, 260)" filter="url(#purpleGlow)">
+    <!-- دائرة محيطة كبيرة مع هالة بنفسجية -->
+    <circle cx="0" cy="0" r="170" fill="none" stroke="url(#purpleGradient)" stroke-width="10" opacity="0.6">
+      <animate attributeName="r" values="170;180;170" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- رمز درع الحماية الذي تم اختراقه -->
+    <g transform="translate(0, -20) scale(1.2)">
+      <!-- الدرع -->
+      <path d="M0,-70 L60,-30 L60,50 L0,80 L-60,50 L-60,-30 Z" fill="url(#purpleGradient)" stroke="#ffffff" stroke-width="2" />
+      
+      <!-- شقوق في الدرع تدل على الاختراق -->
+      <path d="M-20,-30 L30,20" stroke="#ffffff" stroke-width="3" />
+      <path d="M10,-50 L-30,0" stroke="#ffffff" stroke-width="3" />
+      <path d="M-40,20 L10,40" stroke="#ffffff" stroke-width="3" />
+      
+      <!-- رمز الكمبيوتر المخترق في الوسط -->
+      <rect x="-25" y="-10" width="50" height="40" fill="#000000" stroke="#ffffff" stroke-width="1" />
+      <text x="0" y="10" font-family="monospace" font-size="10" fill="#00ff00" text-anchor="middle">&lt;/&gt;</text>
+      <text x="0" y="22" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">HACKED</text>
+      
+      <!-- أشعة الطاقة للخارج -->
+      <g opacity="0.8">
+        <path d="M0,-70 L10,-100" stroke="url(#purpleGradient)" stroke-width="3">
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.5s" repeatCount="indefinite" />
+        </path>
+        <path d="M60,-30 L90,-45" stroke="url(#purpleGradient)" stroke-width="3">
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.7s" repeatCount="indefinite" />
+        </path>
+        <path d="M60,50 L90,75" stroke="url(#purpleGradient)" stroke-width="3">
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.9s" repeatCount="indefinite" />
+        </path>
+        <path d="M0,80 L0,110" stroke="url(#purpleGradient)" stroke-width="3">
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2.1s" repeatCount="indefinite" />
+        </path>
+        <path d="M-60,50 L-90,75" stroke="url(#purpleGradient)" stroke-width="3">
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.6s" repeatCount="indefinite" />
+        </path>
+        <path d="M-60,-30 L-90,-45" stroke="url(#purpleGradient)" stroke-width="3">
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.8s" repeatCount="indefinite" />
+        </path>
+      </g>
+    </g>
+    
+    <!-- دائرة طاقة داخلية -->
+    <circle cx="0" cy="0" r="95" fill="none" stroke="url(#purpleGradient)" stroke-width="5" opacity="0.8">
+      <animate attributeName="r" values="95;100;95" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- نبضات كهربائية -->
+    <g>
+      <path d="M-90,0 L-70,0 L-60,-20 L-40,20 L-20,-20 L0,20 L20,-20 L40,20 L60,-20 L70,0 L90,0" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.9;0.7" dur="1s" repeatCount="indefinite" />
+      </path>
+      <path d="M0,-90 L0,-70 L-20,-60 L20,-40 L-20,-20 L20,0 L-20,20 L20,40 L-20,60 L0,70 L0,90" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.7" transform="rotate(90)">
+        <animate attributeName="opacity" values="0.7;0.9;0.7" dur="1.5s" repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
+  
+  <!-- رموز التقنية المتقدمة والتفاصيل المتطورة -->
+  <g opacity="0.7">
+    <!-- تفاصيل البرمجة -->
+    <g transform="translate(160, 120)" opacity="0.8">
+      <rect x="-50" y="-40" width="100" height="80" fill="#000000" stroke="#ffffff" stroke-width="1" opacity="0.3" rx="5" ry="5" />
+      <text x="0" y="-25" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">#!/bin/bash</text>
+      <text x="0" y="-15" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">for i in {1..100}; do</text>
+      <text x="0" y="-5" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">  curl -s "$TARGET/../$i"</text>
+      <text x="0" y="5" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">  if [ $? -eq 0 ]; then</text>
+      <text x="0" y="15" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">    echo "VULN FOUND: $i"</text>
+      <text x="0" y="25" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">  fi</text>
+      <text x="0" y="35" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">done</text>
+    </g>
+    
+    <!-- محاولة اختراق LFI -->
+    <g transform="translate(640, 120)" opacity="0.8">
+      <rect x="-50" y="-30" width="100" height="60" fill="#000000" stroke="#ffffff" stroke-width="1" opacity="0.3" rx="5" ry="5" />
+      <text x="0" y="-15" font-family="monospace" font-size="8" fill="#ff0000" text-anchor="middle">GET /index.php?file=</text>
+      <text x="0" y="-5" font-family="monospace" font-size="8" fill="#ff0000" text-anchor="middle">../../../etc/passwd</text>
+      <text x="0" y="5" font-family="monospace" font-size="8" fill="#ff0000" text-anchor="middle">HTTP/1.1</text>
+      <text x="0" y="15" font-family="monospace" font-size="8" fill="#ff0000" text-anchor="middle">Host: victim.com</text>
+      <text x="0" y="25" font-family="monospace" font-size="8" fill="#ff0000" text-anchor="middle">User-Agent: LFI-Scanner</text>
+    </g>
+    
+    <!-- إحصائيات اختراق -->
+    <g transform="translate(160, 500)" opacity="0.8">
+      <rect x="-50" y="-30" width="100" height="60" fill="#000000" stroke="#ffffff" stroke-width="1" opacity="0.3" rx="5" ry="5" />
+      <text x="0" y="-15" font-family="monospace" font-size="8" fill="#00ffff" text-anchor="middle">SCAN STATISTICS</text>
+      <text x="0" y="-5" font-family="monospace" font-size="8" fill="#00ffff" text-anchor="middle">Targets: 256</text>
+      <text x="0" y="5" font-family="monospace" font-size="8" fill="#00ffff" text-anchor="middle">Scanned: 187</text>
+      <text x="0" y="15" font-family="monospace" font-size="8" fill="#00ffff" text-anchor="middle">Vulnerable: 42</text>
+      <text x="0" y="25" font-family="monospace" font-size="8" fill="#00ffff" text-anchor="middle">Progress: 73%</text>
+    </g>
+    
+    <!-- مخطط الاختراق -->
+    <g transform="translate(640, 500)" opacity="0.8">
+      <rect x="-50" y="-30" width="100" height="60" fill="#000000" stroke="#ffffff" stroke-width="1" opacity="0.3" rx="5" ry="5" />
+      <text x="0" y="-15" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">ATTACK VECTORS</text>
+      <text x="0" y="-5" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">- Path Traversal</text>
+      <text x="0" y="5" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">- Null Byte Injection</text>
+      <text x="0" y="15" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">- Remote File Include</text>
+      <text x="0" y="25" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">- PHP Filter Chains</text>
+    </g>
+  </g>
+  
+  <!-- مؤشرات الاختراق النشط -->
+  <g transform="translate(400, 300)" opacity="0.8">
+    <text x="0" y="-200" font-family="monospace" font-size="10" fill="#a200ff" text-anchor="middle" filter="url(#purpleGlow)">[ BREACHING SECURITY PERIMETER ]</text>
+    <text x="0" y="-185" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">BYPASSING DEFENSES...</text>
+    <text x="0" y="-170" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">EXPLOITING VULNERABILITIES...</text>
+    <text x="0" y="-155" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">INJECTING PAYLOAD...</text>
+  </g>
+  
+  <!-- شريط تقدم الاختراق -->
+  <g transform="translate(400, 130)">
+    <rect x="-100" y="0" width="200" height="15" fill="none" stroke="#ffffff" stroke-width="1" rx="7" ry="7" />
+    <rect x="-97" y="3" width="150" height="9" fill="url(#purpleGradient)" rx="4" ry="4">
+      <animate attributeName="width" values="0;150;0" dur="10s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- مؤشر تحذير محسن -->
+  <g transform="translate(400, 430)" filter="url(#strongGlow)">
+    <polygon points="0,-45 35,20 -35,20" fill="url(#redGradient)" stroke="#ffffff" stroke-width="2">
+      <animate attributeName="opacity" values="1;0.7;1" dur="1s" repeatCount="indefinite" />
+    </polygon>
+    <text x="0" y="10" font-family="Arial" font-size="30" fill="#ffffff" text-anchor="middle" font-weight="bold">!</text>
+  </g>
+  
+  <!-- اسم الأداة بتصميم فخم محسن -->
+  <g transform="translate(400, 510)" filter="url(#purpleGlow)">
+    <!-- الظل للنص -->
+    <text x="0" y="0" font-family="Impact, sans-serif" font-size="48" font-weight="bold" fill="#000000" text-anchor="middle" opacity="0.5" transform="translate(5, 5)">LFI ULTIMATE SCANNER</text>
+    
+    <!-- النص الرئيسي -->
+    <text x="0" y="0" font-family="Impact, sans-serif" font-size="48" font-weight="bold" fill="url(#purpleGradient)" text-anchor="middle">LFI ULTIMATE SCANNER</text>
+    
+    <!-- توهجات إضافية للنص -->
+    <text x="0" y="0" font-family="Impact, sans-serif" font-size="48" font-weight="bold" fill="none" stroke="#ffffff" stroke-width="1" text-anchor="middle" opacity="0.7">LFI ULTIMATE SCANNER</text>
+    
+    <!-- النص الخفيف المحسن بالأسفل -->
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" opacity="0.8">
