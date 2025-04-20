@@ -1,71 +1,35 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- تدرجات لونية محسنة -->
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- تدرجات لونية -->
   <defs>
     <!-- تدرج خلفية داكنة -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#0a0a0a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#141414;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#000000" />
+      <stop offset="50%" style="stop-color:#0a0a0a" />
+      <stop offset="100%" style="stop-color:#141414" />
     </linearGradient>
     
     <!-- تدرج بنفسجي للعنصر الرئيسي -->
     <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4a0072;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#7b00c7;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#a200ff;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#4a0072" />
+      <stop offset="50%" style="stop-color:#7b00c7" />
+      <stop offset="100%" style="stop-color:#a200ff" />
     </linearGradient>
     
     <!-- تدرج أخضر للإشارات -->
     <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#003300;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#00cc00;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00ff00;stop-opacity:1" />
-    </linearGradient>
-    
-    <!-- تدرج أزرق لتأثيرات الإشعاع -->
-    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#000066;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#0033cc;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#3366ff;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#003300" />
+      <stop offset="50%" style="stop-color:#00cc00" />
+      <stop offset="100%" style="stop-color:#00ff00" />
     </linearGradient>
     
     <!-- تدرج أحمر للتحذير -->
     <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#660000;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#cc0000;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ff0000;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#660000" />
+      <stop offset="50%" style="stop-color:#cc0000" />
+      <stop offset="100%" style="stop-color:#ff0000" />
     </linearGradient>
     
-    <!-- تأثير توهج قوي -->
-    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="15" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-    
-    <!-- تأثير إنذار محسن -->
-    <filter id="enhancedAlarm">
-      <feFlood flood-color="#ff0000" flood-opacity="0.3" result="flood" />
-      <feComposite in="flood" in2="SourceGraphic" operator="in" result="mask" />
-      <feMorphology in="mask" operator="dilate" radius="3" result="dilated" />
-      <feGaussianBlur in="dilated" stdDeviation="3" result="blurred" />
-      <feComposite in="blurred" in2="SourceGraphic" operator="over" />
-    </filter>
-    
-    <!-- تأثير توهج بنفسجي -->
-    <filter id="purpleGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="10" result="blur" />
-      <feFlood flood-color="#a200ff" flood-opacity="0.7" result="color"/>
-      <feComposite in="color" in2="blur" operator="in" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-    
-    <!-- تموجات خلفية -->
+    <!-- نمط شبكة مبسط -->
     <pattern id="networkPattern" width="50" height="50" patternUnits="userSpaceOnUse">
       <path d="M0,25 Q12.5,0 25,25 Q37.5,50 50,25" stroke="#ffffff" stroke-width="0.5" fill="none" opacity="0.1"/>
       <path d="M0,25 Q12.5,50 25,25 Q37.5,0 50,25" stroke="#ffffff" stroke-width="0.5" fill="none" opacity="0.1"/>
@@ -78,14 +42,12 @@
   <!-- نمط الشبكة الخلفية -->
   <rect width="800" height="600" fill="url(#networkPattern)" opacity="0.7" />
   
-  <!-- تأثير الإنذار الأحمر المحسن -->
-  <g opacity="0.15">
-    <rect x="0" y="0" width="800" height="600" fill="#ff0000">
-      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="2s" repeatCount="indefinite" />
-    </rect>
-  </g>
+  <!-- تأثير الإنذار الأحمر المبسط -->
+  <rect x="0" y="0" width="800" height="600" fill="#ff0000" opacity="0.15">
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="2s" repeatCount="indefinite" />
+  </rect>
   
-  <!-- شبكة عملاقة بالخلفية باللون الأبيض -->
+  <!-- شبكة بالخلفية -->
   <g opacity="0.6">
     <!-- خطوط الشبكة الأفقية -->
     <g stroke="#ffffff" stroke-width="0.5">
@@ -196,7 +158,7 @@
       </line>
     </g>
     
-    <!-- نقاط البيانات المتحركة لتمثيل تدفق البيانات -->
+    <!-- نقاط البيانات المتحركة -->
     <g>
       <circle cx="0" cy="0" r="3" fill="#a200ff">
         <animate attributeName="cx" values="150;400" dur="3s" repeatCount="indefinite" />
@@ -217,30 +179,30 @@
     </g>
   </g>
   
-  <!-- العنصر الرئيسي الذي يعبر عن القوة الغاشمة باللون البنفسجي -->
-  <g transform="translate(400, 260)" filter="url(#purpleGlow)">
-    <!-- دائرة محيطة كبيرة مع هالة بنفسجية -->
+  <!-- العنصر الرئيسي البنفسجي -->
+  <g transform="translate(400, 260)">
+    <!-- دائرة محيطة كبيرة -->
     <circle cx="0" cy="0" r="170" fill="none" stroke="url(#purpleGradient)" stroke-width="10" opacity="0.6">
       <animate attributeName="r" values="170;180;170" dur="5s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.6;0.8;0.6" dur="5s" repeatCount="indefinite" />
     </circle>
     
-    <!-- رمز درع الحماية الذي تم اختراقه -->
+    <!-- رمز درع الحماية المخترق -->
     <g transform="translate(0, -20) scale(1.2)">
       <!-- الدرع -->
       <path d="M0,-70 L60,-30 L60,50 L0,80 L-60,50 L-60,-30 Z" fill="url(#purpleGradient)" stroke="#ffffff" stroke-width="2" />
       
-      <!-- شقوق في الدرع تدل على الاختراق -->
+      <!-- شقوق في الدرع -->
       <path d="M-20,-30 L30,20" stroke="#ffffff" stroke-width="3" />
       <path d="M10,-50 L-30,0" stroke="#ffffff" stroke-width="3" />
       <path d="M-40,20 L10,40" stroke="#ffffff" stroke-width="3" />
       
-      <!-- رمز الكمبيوتر المخترق في الوسط -->
+      <!-- رمز الكمبيوتر في الوسط -->
       <rect x="-25" y="-10" width="50" height="40" fill="#000000" stroke="#ffffff" stroke-width="1" />
       <text x="0" y="10" font-family="monospace" font-size="10" fill="#00ff00" text-anchor="middle">&lt;/&gt;</text>
       <text x="0" y="22" font-family="monospace" font-size="8" fill="#00ff00" text-anchor="middle">HACKED</text>
       
-      <!-- أشعة الطاقة للخارج -->
+      <!-- أشعة الطاقة -->
       <g opacity="0.8">
         <path d="M0,-70 L10,-100" stroke="url(#purpleGradient)" stroke-width="3">
           <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.5s" repeatCount="indefinite" />
@@ -279,7 +241,7 @@
     </g>
   </g>
   
-  <!-- رموز التقنية المتقدمة والتفاصيل المتطورة -->
+  <!-- رموز التقنية والتفاصيل -->
   <g opacity="0.7">
     <!-- تفاصيل البرمجة -->
     <g transform="translate(160, 120)" opacity="0.8">
@@ -326,7 +288,7 @@
   
   <!-- مؤشرات الاختراق النشط -->
   <g transform="translate(400, 300)" opacity="0.8">
-    <text x="0" y="-200" font-family="monospace" font-size="10" fill="#a200ff" text-anchor="middle" filter="url(#purpleGlow)">[ BREACHING SECURITY PERIMETER ]</text>
+    <text x="0" y="-200" font-family="monospace" font-size="10" fill="#a200ff" text-anchor="middle">[ BREACHING SECURITY PERIMETER ]</text>
     <text x="0" y="-185" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">BYPASSING DEFENSES...</text>
     <text x="0" y="-170" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">EXPLOITING VULNERABILITIES...</text>
     <text x="0" y="-155" font-family="monospace" font-size="8" fill="#a200ff" text-anchor="middle">INJECTING PAYLOAD...</text>
@@ -340,24 +302,20 @@
     </rect>
   </g>
   
-  <!-- مؤشر تحذير محسن -->
-  <g transform="translate(400, 430)" filter="url(#strongGlow)">
+  <!-- مؤشر تحذير -->
+  <g transform="translate(400, 430)">
     <polygon points="0,-45 35,20 -35,20" fill="url(#redGradient)" stroke="#ffffff" stroke-width="2">
       <animate attributeName="opacity" values="1;0.7;1" dur="1s" repeatCount="indefinite" />
     </polygon>
     <text x="0" y="10" font-family="Arial" font-size="30" fill="#ffffff" text-anchor="middle" font-weight="bold">!</text>
   </g>
   
-  <!-- اسم الأداة بتصميم فخم محسن -->
-  <g transform="translate(400, 510)" filter="url(#purpleGlow)">
-    <!-- الظل للنص -->
-    <text x="0" y="0" font-family="Impact, sans-serif" font-size="48" font-weight="bold" fill="#000000" text-anchor="middle" opacity="0.5" transform="translate(5, 5)">LFI ULTIMATE SCANNER</text>
-    
+  <!-- اسم الأداة بتصميم محسن -->
+  <g transform="translate(400, 510)">
     <!-- النص الرئيسي -->
     <text x="0" y="0" font-family="Impact, sans-serif" font-size="48" font-weight="bold" fill="url(#purpleGradient)" text-anchor="middle">LFI ULTIMATE SCANNER</text>
     
-    <!-- توهجات إضافية للنص -->
+    <!-- النص الحدود -->
     <text x="0" y="0" font-family="Impact, sans-serif" font-size="48" font-weight="bold" fill="none" stroke="#ffffff" stroke-width="1" text-anchor="middle" opacity="0.7">LFI ULTIMATE SCANNER</text>
-    
-    <!-- النص الخفيف المحسن بالأسفل -->
-    <text x="0" y="35" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" opacity="0.8">
+  </g>
+</svg>
