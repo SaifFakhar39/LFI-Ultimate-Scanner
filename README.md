@@ -1,7 +1,7 @@
 # شرح لأداة LFI Ultimate Payload Generator
-
+*.svg binary
 ![وصف الصورة](./image/image.svg)
-<img src="/image/image.svg" width="300" alt="وصف الصورة">
+<img src="./image/image.svg" width="300" alt="وصف الصورة">
 
 هذه الأداة هي مولد متقدم للهجمات من نوع Local File Inclusion (LFI)، والتي تُستخدم في اختبارات الاختراق الأخلاقي للكشف عن ثغرات قراءة الملفات المحلية في المواقع والتطبيقات الويب.
 
